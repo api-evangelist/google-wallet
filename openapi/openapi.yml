@@ -1,0 +1,373 @@
+openapi: 3.1.0
+info:
+  title: Google Wallet API
+  description: >-
+    The Google Wallet API enables developers to create and manage digital passes
+    including event tickets, boarding passes, loyalty cards, gift cards, offers,
+    transit passes, and generic passes. It provides REST endpoints for creating
+    pass classes (templates) and pass objects (instances), managing issuers,
+    handling media uploads, and generating JWT tokens for save-to-wallet
+    functionality.
+  version: 1.0.0
+  contact:
+    name: Google Wallet
+    url: https://developers.google.com/wallet
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+externalDocs:
+  description: Google Wallet API Reference
+  url: https://developers.google.com/wallet/reference/rest
+servers:
+  - url: https://walletobjects.googleapis.com/walletobjects/v1
+    description: Google Wallet API v1 Server
+tags:
+  - name: Generic Passes
+    description: Manage generic pass classes and objects
+  - name: Event Tickets
+    description: Manage event ticket classes and objects
+  - name: Loyalty Cards
+    description: Manage loyalty card classes and objects
+  - name: Offers
+    description: Manage offer classes and objects
+  - name: Gift Cards
+    description: Manage gift card classes and objects
+  - name: Issuers
+    description: Manage wallet issuers
+  - name: JWT
+    description: Create save-to-wallet JWTs
+paths:
+  /genericClass:
+    post:
+      operationId: insertGenericClass
+      summary: Insert Generic Class
+      description: Creates a new generic pass class.
+      tags:
+        - Generic Passes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericClass'
+      responses:
+        '200':
+          description: Generic class created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+    get:
+      operationId: listGenericClasses
+      summary: List Generic Classes
+      description: Lists all generic pass classes for the issuer.
+      tags:
+        - Generic Passes
+      parameters:
+        - name: issuerId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of generic classes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClassListResponse'
+  /genericClass/{resourceId}:
+    get:
+      operationId: getGenericClass
+      summary: Get Generic Class
+      description: Retrieves a specific generic pass class.
+      tags:
+        - Generic Passes
+      parameters:
+        - name: resourceId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Generic class details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+    put:
+      operationId: updateGenericClass
+      summary: Update Generic Class
+      description: Updates a generic pass class.
+      tags:
+        - Generic Passes
+      parameters:
+        - name: resourceId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericClass'
+      responses:
+        '200':
+          description: Generic class updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+  /genericObject:
+    post:
+      operationId: insertGenericObject
+      summary: Insert Generic Object
+      description: Creates a new generic pass object.
+      tags:
+        - Generic Passes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '200':
+          description: Generic object created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /genericObject/{resourceId}:
+    get:
+      operationId: getGenericObject
+      summary: Get Generic Object
+      description: Retrieves a specific generic pass object.
+      tags:
+        - Generic Passes
+      parameters:
+        - name: resourceId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Generic object details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /eventTicketClass:
+    post:
+      operationId: insertEventTicketClass
+      summary: Insert Event Ticket Class
+      description: Creates a new event ticket class.
+      tags:
+        - Event Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventTicketClass'
+      responses:
+        '200':
+          description: Event ticket class created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventTicketClass'
+  /loyaltyClass:
+    post:
+      operationId: insertLoyaltyClass
+      summary: Insert Loyalty Class
+      description: Creates a new loyalty card class.
+      tags:
+        - Loyalty Cards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoyaltyClass'
+      responses:
+        '200':
+          description: Loyalty class created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoyaltyClass'
+  /issuer:
+    get:
+      operationId: listIssuers
+      summary: List Issuers
+      description: Lists all issuers.
+      tags:
+        - Issuers
+      responses:
+        '200':
+          description: List of issuers.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuerListResponse'
+  /jwt:
+    post:
+      operationId: insertJwt
+      summary: Insert JWT
+      description: Creates a signed JWT for save-to-wallet links.
+      tags:
+        - JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JwtInsertRequest'
+      responses:
+        '200':
+          description: JWT created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JwtInsertResponse'
+components:
+  schemas:
+    GenericClass:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the class.
+        classTemplateInfo:
+          type: object
+          description: Template information for the class.
+        imageModulesData:
+          type: array
+          items:
+            type: object
+        textModulesData:
+          type: array
+          items:
+            type: object
+        linksModuleData:
+          type: object
+        multipleDevicesAndHoldersAllowedStatus:
+          type: string
+    GenericClassListResponse:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericClass'
+        pagination:
+          type: object
+          properties:
+            resultsPerPage:
+              type: integer
+            kind:
+              type: string
+    GenericObject:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the object.
+        classId:
+          type: string
+          description: The class this object belongs to.
+        state:
+          type: string
+          enum:
+            - ACTIVE
+            - COMPLETED
+            - EXPIRED
+            - INACTIVE
+        barcode:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: string
+        header:
+          type: object
+          properties:
+            defaultValue:
+              type: object
+              properties:
+                language:
+                  type: string
+                value:
+                  type: string
+    EventTicketClass:
+      type: object
+      properties:
+        id:
+          type: string
+        eventName:
+          type: object
+          properties:
+            defaultValue:
+              type: object
+              properties:
+                language:
+                  type: string
+                value:
+                  type: string
+        venue:
+          type: object
+          properties:
+            name:
+              type: object
+            address:
+              type: object
+        dateTime:
+          type: object
+          properties:
+            start:
+              type: string
+            end:
+              type: string
+        issuerName:
+          type: string
+    LoyaltyClass:
+      type: object
+      properties:
+        id:
+          type: string
+        issuerName:
+          type: string
+        programName:
+          type: string
+        programLogo:
+          type: object
+        reviewStatus:
+          type: string
+    IssuerListResponse:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            type: object
+    JwtInsertRequest:
+      type: object
+      properties:
+        jwt:
+          type: string
+          description: The signed JWT string.
+    JwtInsertResponse:
+      type: object
+      properties:
+        saveUri:
+          type: string
+          format: uri
+          description: URI that can be used for save-to-wallet.
+        resources:
+          type: object

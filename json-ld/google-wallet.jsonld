@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gwallet": "https://developers.google.com/wallet/reference/rest/v1/",
+    "GenericClass": {
+      "@id": "gwallet:genericclass"
+    },
+    "GenericObject": {
+      "@id": "gwallet:genericobject"
+    },
+    "EventTicketClass": {
+      "@id": "gwallet:eventticketclass"
+    },
+    "LoyaltyClass": {
+      "@id": "gwallet:loyaltyclass"
+    },
+    "classId": {
+      "@id": "gwallet:classId",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "gwallet:state",
+      "@type": "xsd:string"
+    },
+    "barcode": {
+      "@id": "gwallet:barcode",
+      "@type": "@json"
+    },
+    "issuerName": {
+      "@id": "https://schema.org/name",
+      "@type": "xsd:string"
+    },
+    "eventName": {
+      "@id": "https://schema.org/name",
+      "@type": "xsd:string"
+    },
+    "programName": {
+      "@id": "gwallet:programName",
+      "@type": "xsd:string"
+    },
+    "saveUri": {
+      "@id": "gwallet:saveUri",
+      "@type": "@id"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
