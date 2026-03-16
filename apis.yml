@@ -1,3 +1,4 @@
+aid: google-wallet
 name: Google Wallet API
 description: >-
   The Google Wallet API enables developers to create and manage digital passes
@@ -9,8 +10,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Digital Wallet
   - Passes
@@ -27,17 +29,35 @@ apis:
     humanURL: https://developers.google.com/wallet
     baseURL: https://walletobjects.googleapis.com/walletobjects/v1
     properties:
+      - type: Documentation
+        url: https://developers.google.com/wallet/reference/rest
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml
+      - type: Authentication
+        url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+      - type: Getting Started
+        url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
 common:
-  - type: GettingStarted
-    url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-  - type: Pricing
+  - type: Portal
     url: https://developers.google.com/wallet
+  - type: Getting Started
+    url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+  - type: Documentation
+    url: https://developers.google.com/wallet
+  - type: Authentication
+    url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+  - type: Terms of Service
+    url: https://developers.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/wallet/support
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
 maintainers:
