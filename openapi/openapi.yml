@@ -22,20 +22,16 @@ servers:
   - url: https://walletobjects.googleapis.com/walletobjects/v1
     description: Google Wallet API v1 Server
 tags:
-  - name: Generic Passes
-    description: Manage generic pass classes and objects
   - name: Event Tickets
     description: Manage event ticket classes and objects
-  - name: Loyalty Cards
-    description: Manage loyalty card classes and objects
-  - name: Offers
-    description: Manage offer classes and objects
-  - name: Gift Cards
-    description: Manage gift card classes and objects
+  - name: Generic Passes
+    description: Manage generic pass classes and objects
   - name: Issuers
     description: Manage wallet issuers
   - name: JWT
     description: Create save-to-wallet JWTs
+  - name: Loyalty Cards
+    description: Manage loyalty card classes and objects
 paths:
   /genericClass:
     post:
