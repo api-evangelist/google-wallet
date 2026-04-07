@@ -40,7 +40,7 @@ paths:
   /genericClass:
     post:
       operationId: insertGenericClass
-      summary: Insert Generic Class
+      summary: Google Wallet Insert Generic Class
       description: Creates a new generic pass class.
       tags:
         - Generic Passes
@@ -59,7 +59,7 @@ paths:
                 $ref: '#/components/schemas/GenericClass'
     get:
       operationId: listGenericClasses
-      summary: List Generic Classes
+      summary: Google Wallet List Generic Classes
       description: Lists all generic pass classes for the issuer.
       tags:
         - Generic Passes
@@ -79,7 +79,7 @@ paths:
   /genericClass/{resourceId}:
     get:
       operationId: getGenericClass
-      summary: Get Generic Class
+      summary: Google Wallet Get Generic Class
       description: Retrieves a specific generic pass class.
       tags:
         - Generic Passes
@@ -98,7 +98,7 @@ paths:
                 $ref: '#/components/schemas/GenericClass'
     put:
       operationId: updateGenericClass
-      summary: Update Generic Class
+      summary: Google Wallet Update Generic Class
       description: Updates a generic pass class.
       tags:
         - Generic Passes
@@ -124,7 +124,7 @@ paths:
   /genericObject:
     post:
       operationId: insertGenericObject
-      summary: Insert Generic Object
+      summary: Google Wallet Insert Generic Object
       description: Creates a new generic pass object.
       tags:
         - Generic Passes
@@ -144,7 +144,7 @@ paths:
   /genericObject/{resourceId}:
     get:
       operationId: getGenericObject
-      summary: Get Generic Object
+      summary: Google Wallet Get Generic Object
       description: Retrieves a specific generic pass object.
       tags:
         - Generic Passes
@@ -164,7 +164,7 @@ paths:
   /eventTicketClass:
     post:
       operationId: insertEventTicketClass
-      summary: Insert Event Ticket Class
+      summary: Google Wallet Insert Event Ticket Class
       description: Creates a new event ticket class.
       tags:
         - Event Tickets
@@ -184,7 +184,7 @@ paths:
   /loyaltyClass:
     post:
       operationId: insertLoyaltyClass
-      summary: Insert Loyalty Class
+      summary: Google Wallet Insert Loyalty Class
       description: Creates a new loyalty card class.
       tags:
         - Loyalty Cards
@@ -204,7 +204,7 @@ paths:
   /issuer:
     get:
       operationId: listIssuers
-      summary: List Issuers
+      summary: Google Wallet List Issuers
       description: Lists all issuers.
       tags:
         - Issuers
@@ -218,7 +218,7 @@ paths:
   /jwt:
     post:
       operationId: insertJwt
-      summary: Insert JWT
+      summary: Google Wallet Insert JWT
       description: Creates a signed JWT for save-to-wallet links.
       tags:
         - JWT
