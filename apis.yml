@@ -35,7 +35,7 @@ apis:
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml
       - type: Authentication
         url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json
@@ -44,17 +44,17 @@ apis:
 common:
   - type: Portal
     url: https://developers.google.com/wallet
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
   - type: Documentation
     url: https://developers.google.com/wallet
   - type: Authentication
     url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://developers.google.com/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://policies.google.com/privacy
-  - type: Status
+  - type: StatusPage
     url: https://status.cloud.google.com/
   - type: Support
     url: https://developers.google.com/wallet/support
