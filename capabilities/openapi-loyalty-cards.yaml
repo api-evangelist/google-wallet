@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Wallet API — Loyalty Cards
+  description: 'Google Wallet API — Loyalty Cards. 1 operations. Lead operation: Google Wallet Insert Loyalty Class. Self-contained
+    Naftiko capability covering one Google Wallet business surface.'
+  tags:
+  - Google Wallet
+  - Loyalty Cards
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_WALLET_API_KEY: GOOGLE_WALLET_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-loyalty-cards
+    baseUri: https://walletobjects.googleapis.com/walletobjects/v1
+    description: Google Wallet API — Loyalty Cards business capability. Self-contained, no shared references.
+    resources:
+    - name: loyaltyClass
+      path: /loyaltyClass
+      operations:
+      - name: insertloyaltyclass
+        method: POST
+        description: Google Wallet Insert Loyalty Class
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: openapi-loyalty-cards-rest
+    port: 8080
+    description: REST adapter for Google Wallet API — Loyalty Cards. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/loyaltyclass
+      name: loyaltyclass
+      description: REST surface for loyaltyClass.
+      operations:
+      - method: POST
+        name: insertloyaltyclass
+        description: Google Wallet Insert Loyalty Class
+        call: openapi-loyalty-cards.insertloyaltyclass
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-loyalty-cards-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Wallet API — Loyalty Cards. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: google-wallet-insert-loyalty-class
+      description: Google Wallet Insert Loyalty Class
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-loyalty-cards.insertloyaltyclass
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

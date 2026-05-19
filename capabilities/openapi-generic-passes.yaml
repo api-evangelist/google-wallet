@@ -1,0 +1,276 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Wallet API — Generic Passes
+  description: 'Google Wallet API — Generic Passes. 6 operations. Lead operation: Google Wallet Insert Generic Class. Self-contained
+    Naftiko capability covering one Google Wallet business surface.'
+  tags:
+  - Google Wallet
+  - Generic Passes
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_WALLET_API_KEY: GOOGLE_WALLET_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-generic-passes
+    baseUri: https://walletobjects.googleapis.com/walletobjects/v1
+    description: Google Wallet API — Generic Passes business capability. Self-contained, no shared references.
+    resources:
+    - name: genericClass
+      path: /genericClass
+      operations:
+      - name: insertgenericclass
+        method: POST
+        description: Google Wallet Insert Generic Class
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listgenericclasses
+        method: GET
+        description: Google Wallet List Generic Classes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: issuerId
+          in: query
+          type: string
+          required: true
+    - name: genericClass-resourceId
+      path: /genericClass/{resourceId}
+      operations:
+      - name: getgenericclass
+        method: GET
+        description: Google Wallet Get Generic Class
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceId
+          in: path
+          type: string
+          required: true
+      - name: updategenericclass
+        method: PUT
+        description: Google Wallet Update Generic Class
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: genericObject
+      path: /genericObject
+      operations:
+      - name: insertgenericobject
+        method: POST
+        description: Google Wallet Insert Generic Object
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: genericObject-resourceId
+      path: /genericObject/{resourceId}
+      operations:
+      - name: getgenericobject
+        method: GET
+        description: Google Wallet Get Generic Object
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: openapi-generic-passes-rest
+    port: 8080
+    description: REST adapter for Google Wallet API — Generic Passes. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/genericclass
+      name: genericclass
+      description: REST surface for genericClass.
+      operations:
+      - method: POST
+        name: insertgenericclass
+        description: Google Wallet Insert Generic Class
+        call: openapi-generic-passes.insertgenericclass
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listgenericclasses
+        description: Google Wallet List Generic Classes
+        call: openapi-generic-passes.listgenericclasses
+        with:
+          issuerId: rest.issuerId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/genericclass/{resourceid}
+      name: genericclass-resourceid
+      description: REST surface for genericClass-resourceId.
+      operations:
+      - method: GET
+        name: getgenericclass
+        description: Google Wallet Get Generic Class
+        call: openapi-generic-passes.getgenericclass
+        with:
+          resourceId: rest.resourceId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updategenericclass
+        description: Google Wallet Update Generic Class
+        call: openapi-generic-passes.updategenericclass
+        with:
+          resourceId: rest.resourceId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/genericobject
+      name: genericobject
+      description: REST surface for genericObject.
+      operations:
+      - method: POST
+        name: insertgenericobject
+        description: Google Wallet Insert Generic Object
+        call: openapi-generic-passes.insertgenericobject
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/genericobject/{resourceid}
+      name: genericobject-resourceid
+      description: REST surface for genericObject-resourceId.
+      operations:
+      - method: GET
+        name: getgenericobject
+        description: Google Wallet Get Generic Object
+        call: openapi-generic-passes.getgenericobject
+        with:
+          resourceId: rest.resourceId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-generic-passes-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Wallet API — Generic Passes. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: google-wallet-insert-generic-class
+      description: Google Wallet Insert Generic Class
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-generic-passes.insertgenericclass
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-wallet-list-generic-classes
+      description: Google Wallet List Generic Classes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-generic-passes.listgenericclasses
+      with:
+        issuerId: tools.issuerId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-wallet-get-generic-class
+      description: Google Wallet Get Generic Class
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-generic-passes.getgenericclass
+      with:
+        resourceId: tools.resourceId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-wallet-update-generic-class
+      description: Google Wallet Update Generic Class
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: openapi-generic-passes.updategenericclass
+      with:
+        resourceId: tools.resourceId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-wallet-insert-generic-object
+      description: Google Wallet Insert Generic Object
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-generic-passes.insertgenericobject
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-wallet-get-generic-object
+      description: Google Wallet Get Generic Object
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-generic-passes.getgenericobject
+      with:
+        resourceId: tools.resourceId
+      outputParameters:
+      - type: object
+        mapping: $.
