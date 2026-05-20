@@ -11,60 +11,62 @@ modified: '2026-05-19'
 specificationVersion: '0.19'
 type: Index
 tags:
-- Digital Wallet
-- Google Wallet
-- Loyalty Cards
-- Mobile Payments
-- Passes
-- Tickets
+  - Digital Wallet
+  - Google Wallet
+  - Loyalty Cards
+  - Mobile Payments
+  - Passes
+  - Tickets
 apis:
-- name: Google Wallet API
-  description: REST API for creating and managing digital passes including event tickets, loyalty cards, gift cards, offers,
-    transit passes, and generic passes in Google Wallet.
-  humanURL: https://developers.google.com/wallet
-  baseURL: https://walletobjects.googleapis.com/walletobjects/v1
-  properties:
-  - type: Documentation
-    url: https://developers.google.com/wallet/reference/rest
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml
-  - type: Authentication
-    url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+  - name: Google Wallet API
+    description: REST API for creating and managing digital passes including event tickets, loyalty cards, gift cards, offers,
+      transit passes, and generic passes in Google Wallet.
+    humanURL: https://developers.google.com/wallet
+    baseURL: https://walletobjects.googleapis.com/walletobjects/v1
+    properties:
+    - type: Documentation
+      url: https://developers.google.com/wallet/reference/rest
+    - type: OpenAPI
+      url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml
+    - type: Authentication
+      url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+    - type: GettingStarted
+      url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+    - type: JSONSchema
+      url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json
+    - type: JSONLD
+      url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
+    - type: NaftikoCapability
+      url: capabilities/openapi-event-tickets.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-generic-passes.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-issuers.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-jwt.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-loyalty-cards.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/google-wallet
+  - type: Portal
+    url: https://developers.google.com/wallet
   - type: GettingStarted
     url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-  - type: JSONSchema
-    url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json
+  - type: Documentation
+    url: https://developers.google.com/wallet
+  - type: Authentication
+    url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
+  - type: TermsOfService
+    url: https://developers.google.com/terms
+  - type: PrivacyPolicy
+    url: https://policies.google.com/privacy
+  - type: StatusPage
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/wallet/support
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
-  - type: NaftikoCapability
-    url: capabilities/openapi-event-tickets.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-generic-passes.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-issuers.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-jwt.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-loyalty-cards.yaml
-common:
-- type: Portal
-  url: https://developers.google.com/wallet
-- type: GettingStarted
-  url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-- type: Documentation
-  url: https://developers.google.com/wallet
-- type: Authentication
-  url: https://developers.google.com/wallet/generic/getting-started/onboarding-guide
-- type: TermsOfService
-  url: https://developers.google.com/terms
-- type: PrivacyPolicy
-  url: https://policies.google.com/privacy
-- type: StatusPage
-  url: https://status.cloud.google.com/
-- type: Support
-  url: https://developers.google.com/wallet/support
-- type: JSONLD
-  url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
