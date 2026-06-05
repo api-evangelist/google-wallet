@@ -1,34 +1,61 @@
-# Google Wallet API
+# Google Wallet (google-wallet)
 
 The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality on Android devices and the web.
 
-## Artifacts
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/apis.yml)
 
-- **APIs.yml** - Machine-readable API metadata following the APIs.json specification.
-- **OpenAPI** (`openapi/openapi.yml`) - OpenAPI 3.1.0 specification describing the Wallet API endpoints for pass management, issuers, and JWTs.
-- **JSON Schema** (`json-schema/google-wallet.json`) - JSON Schema (draft 2020-12) defining pass class and object definitions.
-- **JSON-LD** (`json-ld/google-wallet.jsonld`) - JSON-LD context mapping Wallet API terms to schema.org and API-specific vocabularies.
+## Scope
 
-## Key Endpoints
+- **Type:** Index
 
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/genericClass` | Create a generic pass class |
-| GET | `/genericClass` | List generic pass classes |
-| GET | `/genericClass/{resourceId}` | Get a generic pass class |
-| POST | `/genericObject` | Create a generic pass object |
-| GET | `/genericObject/{resourceId}` | Get a generic pass object |
-| POST | `/eventTicketClass` | Create an event ticket class |
-| POST | `/loyaltyClass` | Create a loyalty card class |
-| GET | `/issuer` | List issuers |
-| POST | `/jwt` | Create a save-to-wallet JWT |
+## Tags
 
-## Resources
+- Digital Wallet
+- Google Wallet
+- Loyalty Cards
+- Mobile Payments
+- Passes
+- Tickets
 
-- [API Reference](https://developers.google.com/wallet/reference/rest)
+## Timestamps
+
+- **Created:** 2026-03-13
+- **Modified:** 2026-05-19
+
+## APIs
+
+### Google Wallet API
+
+REST API for creating and managing digital passes including event tickets, loyalty cards, gift cards, offers, transit passes, and generic passes in Google Wallet.
+
+- **Human URL:** [https://developers.google.com/wallet](https://developers.google.com/wallet)
+- **Base URL:** `https://walletobjects.googleapis.com/walletobjects/v1`
+
+#### Properties
+
+- [Documentation](https://developers.google.com/wallet/reference/rest)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Authentication](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
 - [Getting Started](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
-- [REST API Samples](https://github.com/google-wallet/rest-samples)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-## Maintainer
+## Common Properties
 
-Kin Lane - kin@apievangelist.com
+- [GitHub Organization](https://github.com/google-wallet)
+- [Portal](https://developers.google.com/wallet)
+- [Getting Started](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
+- [Documentation](https://developers.google.com/wallet)
+- [Authentication](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
+- [Terms of Service](https://developers.google.com/terms)
+- [Privacy Policy](https://policies.google.com/privacy)
+- [Status Page](https://status.cloud.google.com/)
+- [Support](https://developers.google.com/wallet/support)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
