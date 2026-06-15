@@ -1,0 +1,212 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Wallet API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Generic Passes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet List Generic Classes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass",
+            "params": [
+              {
+                "name": "issuerId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists all generic pass classes for the issuer."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Insert Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Get Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Update Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Insert Generic Object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericObject",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new generic pass object."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Get Generic Object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericObject/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific generic pass object."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Event Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet Insert Event Ticket Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/eventTicketClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new event ticket class."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Loyalty Cards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet Insert Loyalty Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/loyaltyClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new loyalty card class."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Issuers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet List Issuers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/issuer"
+          },
+          "docs": "Lists all issuers."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "JWT",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet Insert JWT",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/jwt",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a signed JWT for save-to-wallet links."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
