@@ -39,6 +39,10 @@ apis:
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-wallet-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-wallet-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/google-wallet
   - type: Portal
