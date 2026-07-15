@@ -39,6 +39,8 @@ apis:
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-wallet-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-wallet-vulnerability-disclosure.yml
   - type: DomainSecurity
