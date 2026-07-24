@@ -1,0 +1,215 @@
+openapi: 3.1.0
+info:
+  title: Google Wallet Event Tickets Generic Passes API
+  description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
+  version: 1.0.0
+  contact:
+    name: Google Wallet
+    url: https://developers.google.com/wallet
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://walletobjects.googleapis.com/walletobjects/v1
+  description: Google Wallet API v1 Server
+tags:
+- name: Generic Passes
+  description: Manage generic pass classes and objects
+paths:
+  /genericClass:
+    post:
+      operationId: insertGenericClass
+      summary: Google Wallet Insert Generic Class
+      description: Creates a new generic pass class.
+      tags:
+      - Generic Passes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericClass'
+      responses:
+        '200':
+          description: Generic class created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+    get:
+      operationId: listGenericClasses
+      summary: Google Wallet List Generic Classes
+      description: Lists all generic pass classes for the issuer.
+      tags:
+      - Generic Passes
+      parameters:
+      - name: issuerId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of generic classes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClassListResponse'
+  /genericClass/{resourceId}:
+    get:
+      operationId: getGenericClass
+      summary: Google Wallet Get Generic Class
+      description: Retrieves a specific generic pass class.
+      tags:
+      - Generic Passes
+      parameters:
+      - name: resourceId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Generic class details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+    put:
+      operationId: updateGenericClass
+      summary: Google Wallet Update Generic Class
+      description: Updates a generic pass class.
+      tags:
+      - Generic Passes
+      parameters:
+      - name: resourceId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericClass'
+      responses:
+        '200':
+          description: Generic class updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericClass'
+  /genericObject:
+    post:
+      operationId: insertGenericObject
+      summary: Google Wallet Insert Generic Object
+      description: Creates a new generic pass object.
+      tags:
+      - Generic Passes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '200':
+          description: Generic object created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /genericObject/{resourceId}:
+    get:
+      operationId: getGenericObject
+      summary: Google Wallet Get Generic Object
+      description: Retrieves a specific generic pass object.
+      tags:
+      - Generic Passes
+      parameters:
+      - name: resourceId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Generic object details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+components:
+  schemas:
+    GenericClassListResponse:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericClass'
+        pagination:
+          type: object
+          properties:
+            resultsPerPage:
+              type: integer
+            kind:
+              type: string
+    GenericClass:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the class.
+        classTemplateInfo:
+          type: object
+          description: Template information for the class.
+        imageModulesData:
+          type: array
+          items:
+            type: object
+        textModulesData:
+          type: array
+          items:
+            type: object
+        linksModuleData:
+          type: object
+        multipleDevicesAndHoldersAllowedStatus:
+          type: string
+    GenericObject:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the object.
+        classId:
+          type: string
+          description: The class this object belongs to.
+        state:
+          type: string
+          enum:
+          - ACTIVE
+          - COMPLETED
+          - EXPIRED
+          - INACTIVE
+        barcode:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: string
+        header:
+          type: object
+          properties:
+            defaultValue:
+              type: object
+              properties:
+                language:
+                  type: string
+                value:
+                  type: string
+externalDocs:
+  description: Google Wallet API Reference
+  url: https://developers.google.com/wallet/reference/rest

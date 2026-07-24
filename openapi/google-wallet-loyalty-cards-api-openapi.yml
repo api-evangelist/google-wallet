@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Google Wallet Event Tickets Loyalty Cards API
+  description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
+  version: 1.0.0
+  contact:
+    name: Google Wallet
+    url: https://developers.google.com/wallet
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://walletobjects.googleapis.com/walletobjects/v1
+  description: Google Wallet API v1 Server
+tags:
+- name: Loyalty Cards
+  description: Manage loyalty card classes and objects
+paths:
+  /loyaltyClass:
+    post:
+      operationId: insertLoyaltyClass
+      summary: Google Wallet Insert Loyalty Class
+      description: Creates a new loyalty card class.
+      tags:
+      - Loyalty Cards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoyaltyClass'
+      responses:
+        '200':
+          description: Loyalty class created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoyaltyClass'
+components:
+  schemas:
+    LoyaltyClass:
+      type: object
+      properties:
+        id:
+          type: string
+        issuerName:
+          type: string
+        programName:
+          type: string
+        programLogo:
+          type: object
+        reviewStatus:
+          type: string
+externalDocs:
+  description: Google Wallet API Reference
+  url: https://developers.google.com/wallet/reference/rest

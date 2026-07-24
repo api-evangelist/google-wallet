@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: Google Wallet Event Tickets Issuers API
+  description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
+  version: 1.0.0
+  contact:
+    name: Google Wallet
+    url: https://developers.google.com/wallet
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://walletobjects.googleapis.com/walletobjects/v1
+  description: Google Wallet API v1 Server
+tags:
+- name: Issuers
+  description: Manage wallet issuers
+paths:
+  /issuer:
+    get:
+      operationId: listIssuers
+      summary: Google Wallet List Issuers
+      description: Lists all issuers.
+      tags:
+      - Issuers
+      responses:
+        '200':
+          description: List of issuers.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssuerListResponse'
+components:
+  schemas:
+    IssuerListResponse:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            type: object
+externalDocs:
+  description: Google Wallet API Reference
+  url: https://developers.google.com/wallet/reference/rest
