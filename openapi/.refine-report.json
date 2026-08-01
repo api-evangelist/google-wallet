@@ -1,0 +1,22 @@
+{
+  "provider": "google-wallet",
+  "sources": [
+    "google-wallet-event-tickets-api-openapi.yml",
+    "google-wallet-generic-passes-api-openapi.yml",
+    "google-wallet-issuers-api-openapi.yml",
+    "google-wallet-jwt-api-openapi.yml",
+    "google-wallet-loyalty-cards-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-wallet-event-tickets-api-openapi.yml",
+    "google-wallet-generic-passes-api-openapi.yml",
+    "google-wallet-issuers-api-openapi.yml",
+    "google-wallet-jwt-api-openapi.yml",
+    "google-wallet-loyalty-cards-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

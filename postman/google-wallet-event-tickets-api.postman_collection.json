@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "7a1c10b4-b35b-4d08-b9aa-1e2f31f5f439",
+    "name": "Google Wallet Event Tickets API",
+    "description": "The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.\n\nContact Support:\n Name: Google Wallet",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:32.000Z",
+    "updatedAt": "2026-07-28T01:50:32.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-7a1c10b4-b35b-4d08-b9aa-1e2f31f5f439"
+  },
+  "item": [
+    {
+      "name": "eventTicketClass",
+      "item": [
+        {
+          "name": "Google Wallet Insert Event Ticket Class",
+          "id": "0d5f9c39-6da0-414d-8bed-1f75001c82c8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"eventName\": {\n    \"defaultValue\": {\n      \"language\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  },\n  \"venue\": {\n    \"name\": {},\n    \"address\": {}\n  },\n  \"dateTime\": {\n    \"start\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"issuerName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/eventTicketClass",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "eventTicketClass"
+              ]
+            },
+            "description": "Creates a new event ticket class."
+          },
+          "response": [
+            {
+              "id": "7959892c-1a4f-4db8-9f5c-44548278fbb0",
+              "name": "Event ticket class created.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"eventName\": {\n    \"defaultValue\": {\n      \"language\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  },\n  \"venue\": {\n    \"name\": {},\n    \"address\": {}\n  },\n  \"dateTime\": {\n    \"start\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"issuerName\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/eventTicketClass",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "eventTicketClass"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"id\": \"<string>\",\n  \"eventName\": {\n    \"defaultValue\": {\n      \"language\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  },\n  \"venue\": {\n    \"name\": {},\n    \"address\": {}\n  },\n  \"dateTime\": {\n    \"start\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"issuerName\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T01:50:33.000Z",
+              "updatedAt": "2026-07-28T01:50:33.000Z",
+              "uid": "35240-7959892c-1a4f-4db8-9f5c-44548278fbb0"
+            }
+          ],
+          "createdAt": "2026-07-28T01:50:33.000Z",
+          "updatedAt": "2026-07-28T01:50:33.000Z",
+          "uid": "35240-0d5f9c39-6da0-414d-8bed-1f75001c82c8"
+        }
+      ],
+      "id": "5a86c285-a396-436f-bf43-2a94598c4f79",
+      "createdAt": "2026-07-28T01:50:33.000Z",
+      "updatedAt": "2026-07-28T01:50:33.000Z",
+      "uid": "35240-5a86c285-a396-436f-bf43-2a94598c4f79"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://walletobjects.googleapis.com/walletobjects/v1"
+    }
+  ]
+}

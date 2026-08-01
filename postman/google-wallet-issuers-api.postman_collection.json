@@ -1,0 +1,97 @@
+{
+  "info": {
+    "_postman_id": "cefdd3b6-ff27-4b6c-9ce7-d3afc04f1c6d",
+    "name": "Google Wallet Event Tickets Issuers API",
+    "description": "The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.\n\nContact Support:\n Name: Google Wallet",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:34.000Z",
+    "updatedAt": "2026-07-28T01:50:34.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-cefdd3b6-ff27-4b6c-9ce7-d3afc04f1c6d"
+  },
+  "item": [
+    {
+      "name": "issuer",
+      "item": [
+        {
+          "name": "Google Wallet List Issuers",
+          "id": "ba3eebcf-8f98-405b-94c6-6940f577b42c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/issuer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "issuer"
+              ]
+            },
+            "description": "Lists all issuers."
+          },
+          "response": [
+            {
+              "id": "6bb63d8f-a2cf-4490-bb72-b80551630ed2",
+              "name": "List of issuers.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/issuer",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "issuer"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T01:50:35.000Z",
+              "updatedAt": "2026-07-28T01:50:35.000Z",
+              "uid": "35240-6bb63d8f-a2cf-4490-bb72-b80551630ed2"
+            }
+          ],
+          "createdAt": "2026-07-28T01:50:35.000Z",
+          "updatedAt": "2026-07-28T01:50:35.000Z",
+          "uid": "35240-ba3eebcf-8f98-405b-94c6-6940f577b42c"
+        }
+      ],
+      "id": "c0a39b80-3b14-4ca3-9769-e424609b2248",
+      "createdAt": "2026-07-28T01:50:35.000Z",
+      "updatedAt": "2026-07-28T01:50:35.000Z",
+      "uid": "35240-c0a39b80-3b14-4ca3-9769-e424609b2248"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://walletobjects.googleapis.com/walletobjects/v1"
+    }
+  ]
+}
