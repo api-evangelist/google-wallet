@@ -1,0 +1,124 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Wallet Event Tickets Generic Passes API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Generic Passes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet List Generic Classes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass",
+            "params": [
+              {
+                "name": "issuerId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists all generic pass classes for the issuer."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Insert Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Get Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Update Generic Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericClass/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a generic pass class."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Insert Generic Object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericObject",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new generic pass object."
+        },
+        {
+          "info": {
+            "name": "Google Wallet Get Generic Object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/genericObject/:resourceId",
+            "params": [
+              {
+                "name": "resourceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific generic pass object."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

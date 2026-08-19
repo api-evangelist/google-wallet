@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "8064f654-a208-4e1a-abb0-3ca0749ab350",
+      "name": "Issuers",
+      "description": {
+        "content": "Manage wallet issuers",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f31a65b-028d-49e3-9485-253bd25fc125",
+          "name": "Google Wallet List Issuers",
+          "request": {
+            "name": "Google Wallet List Issuers",
+            "description": {
+              "content": "Lists all issuers.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "issuer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fe4a3b1e-665f-4605-9921-efb6bcfa4863",
+              "name": "List of issuers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "issuer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://walletobjects.googleapis.com/walletobjects/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2ba6daca-6746-4860-857b-5e24b24aa051",
+    "name": "Google Wallet Event Tickets Issuers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.\n\nContact Support:\n Name: Google Wallet",
+      "type": "text/plain"
+    }
+  }
+}

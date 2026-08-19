@@ -1,0 +1,581 @@
+{
+  "item": [
+    {
+      "id": "c8494e9d-efdd-48e5-a521-c6657ba9b603",
+      "name": "Generic Passes",
+      "description": {
+        "content": "Manage generic pass classes and objects",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0899d813-9be4-4b71-9cbc-ef40ec9746e0",
+          "name": "Google Wallet Insert Generic Class",
+          "request": {
+            "name": "Google Wallet Insert Generic Class",
+            "description": {
+              "content": "Creates a new generic pass class.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericClass"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"classTemplateInfo\": \"<object>\",\n  \"imageModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"textModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"linksModuleData\": \"<object>\",\n  \"multipleDevicesAndHoldersAllowedStatus\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c0d21f9d-1458-4f08-bcac-2901fe60656e",
+              "name": "Generic class created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericClass"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"classTemplateInfo\": \"<object>\",\n  \"imageModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"textModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"linksModuleData\": \"<object>\",\n  \"multipleDevicesAndHoldersAllowedStatus\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"classTemplateInfo\": {},\n  \"linksModuleData\": {},\n  \"multipleDevicesAndHoldersAllowedStatus\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f43b81d9-7228-4499-815c-a1697f3e9c80",
+          "name": "Google Wallet List Generic Classes",
+          "request": {
+            "name": "Google Wallet List Generic Classes",
+            "description": {
+              "content": "Lists all generic pass classes for the issuer.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericClass"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "issuerId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c182d4ee-48b9-4d7c-bd40-6cd766ce7dd4",
+              "name": "List of generic classes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericClass"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "issuerId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"resources\": [\n    {\n      \"id\": \"string\",\n      \"classTemplateInfo\": {},\n      \"linksModuleData\": {},\n      \"multipleDevicesAndHoldersAllowedStatus\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"classTemplateInfo\": {},\n      \"linksModuleData\": {},\n      \"multipleDevicesAndHoldersAllowedStatus\": \"string\"\n    }\n  ],\n  \"pagination\": {\n    \"resultsPerPage\": 2664,\n    \"kind\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e915219f-8013-4c7d-b80c-efabd48cbafd",
+          "name": "Google Wallet Get Generic Class",
+          "request": {
+            "name": "Google Wallet Get Generic Class",
+            "description": {
+              "content": "Retrieves a specific generic pass class.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericClass",
+                ":resourceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b2586839-a094-475e-b99a-9a74c41f2285",
+              "name": "Generic class details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericClass",
+                    ":resourceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"classTemplateInfo\": {},\n  \"linksModuleData\": {},\n  \"multipleDevicesAndHoldersAllowedStatus\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a40c4073-8f5b-40eb-ad8a-a6efe849e9a6",
+          "name": "Google Wallet Update Generic Class",
+          "request": {
+            "name": "Google Wallet Update Generic Class",
+            "description": {
+              "content": "Updates a generic pass class.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericClass",
+                ":resourceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"classTemplateInfo\": \"<object>\",\n  \"imageModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"textModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"linksModuleData\": \"<object>\",\n  \"multipleDevicesAndHoldersAllowedStatus\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "de712e4a-4487-43a6-babd-30b46857d0c8",
+              "name": "Generic class updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericClass",
+                    ":resourceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"classTemplateInfo\": \"<object>\",\n  \"imageModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"textModulesData\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"linksModuleData\": \"<object>\",\n  \"multipleDevicesAndHoldersAllowedStatus\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"classTemplateInfo\": {},\n  \"linksModuleData\": {},\n  \"multipleDevicesAndHoldersAllowedStatus\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "950d34cd-6feb-4e42-b651-d5b602579162",
+          "name": "Google Wallet Insert Generic Object",
+          "request": {
+            "name": "Google Wallet Insert Generic Object",
+            "description": {
+              "content": "Creates a new generic pass object.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericObject"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"classId\": \"<string>\",\n  \"state\": \"<string>\",\n  \"barcode\": {\n    \"type\": \"<string>\",\n    \"value\": \"<string>\"\n  },\n  \"header\": {\n    \"defaultValue\": {\n      \"language\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a7403644-6ed6-4ce1-a57c-372939db233f",
+              "name": "Generic object created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericObject"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"classId\": \"<string>\",\n  \"state\": \"<string>\",\n  \"barcode\": {\n    \"type\": \"<string>\",\n    \"value\": \"<string>\"\n  },\n  \"header\": {\n    \"defaultValue\": {\n      \"language\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"classId\": \"string\",\n  \"state\": \"INACTIVE\",\n  \"barcode\": {\n    \"type\": \"string\",\n    \"value\": \"string\"\n  },\n  \"header\": {\n    \"defaultValue\": {\n      \"language\": \"string\",\n      \"value\": \"string\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0cec8fd-10e2-4f2a-ab83-5d0680f11aeb",
+          "name": "Google Wallet Get Generic Object",
+          "request": {
+            "name": "Google Wallet Get Generic Object",
+            "description": {
+              "content": "Retrieves a specific generic pass object.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "genericObject",
+                ":resourceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "224a6b7e-7666-472f-9042-5056d337cc7d",
+              "name": "Generic object details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "genericObject",
+                    ":resourceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"classId\": \"string\",\n  \"state\": \"INACTIVE\",\n  \"barcode\": {\n    \"type\": \"string\",\n    \"value\": \"string\"\n  },\n  \"header\": {\n    \"defaultValue\": {\n      \"language\": \"string\",\n      \"value\": \"string\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://walletobjects.googleapis.com/walletobjects/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "37a2cdbd-e929-44c6-abb2-6be0fed9111f",
+    "name": "Google Wallet Event Tickets Generic Passes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.\n\nContact Support:\n Name: Google Wallet",
+      "type": "text/plain"
+    }
+  }
+}

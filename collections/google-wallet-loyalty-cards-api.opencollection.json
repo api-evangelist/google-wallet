@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Wallet Event Tickets Loyalty Cards API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Loyalty Cards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet Insert Loyalty Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/loyaltyClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new loyalty card class."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

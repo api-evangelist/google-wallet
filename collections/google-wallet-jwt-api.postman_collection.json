@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "75b5fa9c-9351-4ad0-9ab1-98612198ac92",
+      "name": "JWT",
+      "description": {
+        "content": "Create save-to-wallet JWTs",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dee638fc-8317-4747-bfbe-5c0cb8e55625",
+          "name": "Google Wallet Insert JWT",
+          "request": {
+            "name": "Google Wallet Insert JWT",
+            "description": {
+              "content": "Creates a signed JWT for save-to-wallet links.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "jwt"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jwt\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "52eb420f-7947-43bd-92e9-47b79806132e",
+              "name": "JWT created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "jwt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jwt\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"saveUri\": \"https://zgeuISyTCXRcEp.edmkU9\",\n  \"resources\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://walletobjects.googleapis.com/walletobjects/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8a339f3c-5543-4476-af42-664b80646bfd",
+    "name": "Google Wallet Event Tickets JWT API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.\n\nContact Support:\n Name: Google Wallet",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Wallet Event Tickets API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Event Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Wallet Insert Event Ticket Class",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://walletobjects.googleapis.com/walletobjects/v1/eventTicketClass",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new event ticket class."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
