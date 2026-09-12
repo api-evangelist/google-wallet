@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Google Wallet Event Tickets JWT API
   description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
@@ -38,6 +38,12 @@ paths:
                 $ref: '#/components/schemas/JwtInsertResponse'
 components:
   schemas:
+    JwtInsertRequest:
+      type: object
+      properties:
+        jwt:
+          type: string
+          description: The signed JWT string.
     JwtInsertResponse:
       type: object
       properties:
@@ -47,12 +53,6 @@ components:
           description: URI that can be used for save-to-wallet.
         resources:
           type: object
-    JwtInsertRequest:
-      type: object
-      properties:
-        jwt:
-          type: string
-          description: The signed JWT string.
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest
