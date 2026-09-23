@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Wallet Event Tickets Issuers API
+  title: Google Wallet Issuers API
   description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
   version: 1.0.0
   contact:

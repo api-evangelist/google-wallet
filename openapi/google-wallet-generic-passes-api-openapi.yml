@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Wallet Event Tickets Generic Passes API
+  title: Google Wallet Generic Passes API
   description: The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality.
   version: 1.0.0
   contact:
@@ -156,27 +156,6 @@ components:
               type: integer
             kind:
               type: string
-    GenericClass:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique identifier for the class.
-        classTemplateInfo:
-          type: object
-          description: Template information for the class.
-        imageModulesData:
-          type: array
-          items:
-            type: object
-        textModulesData:
-          type: array
-          items:
-            type: object
-        linksModuleData:
-          type: object
-        multipleDevicesAndHoldersAllowedStatus:
-          type: string
     GenericObject:
       type: object
       properties:
@@ -210,6 +189,27 @@ components:
                   type: string
                 value:
                   type: string
+    GenericClass:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the class.
+        classTemplateInfo:
+          type: object
+          description: Template information for the class.
+        imageModulesData:
+          type: array
+          items:
+            type: object
+        textModulesData:
+          type: array
+          items:
+            type: object
+        linksModuleData:
+          type: object
+        multipleDevicesAndHoldersAllowedStatus:
+          type: string
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest
