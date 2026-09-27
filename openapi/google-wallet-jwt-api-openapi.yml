@@ -38,12 +38,6 @@ paths:
                 $ref: '#/components/schemas/JwtInsertResponse'
 components:
   schemas:
-    JwtInsertRequest:
-      type: object
-      properties:
-        jwt:
-          type: string
-          description: The signed JWT string.
     JwtInsertResponse:
       type: object
       properties:
@@ -53,6 +47,12 @@ components:
           description: URI that can be used for save-to-wallet.
         resources:
           type: object
+    JwtInsertRequest:
+      type: object
+      properties:
+        jwt:
+          type: string
+          description: The signed JWT string.
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest

@@ -41,6 +41,13 @@ tags:
   - Loyalty Cards
   - Mobile Payments
   - Passes
+  - Ticketing
+tags_raw:
+  - Digital Wallet
+  - Google Wallet
+  - Loyalty Cards
+  - Mobile Payments
+  - Passes
   - Tickets
 apis:
 - aid: google-wallet:google-wallet-event-tickets-api

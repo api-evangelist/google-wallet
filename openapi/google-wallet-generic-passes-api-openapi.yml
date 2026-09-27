@@ -142,20 +142,27 @@ paths:
                 $ref: '#/components/schemas/GenericObject'
 components:
   schemas:
-    GenericClassListResponse:
+    GenericClass:
       type: object
       properties:
-        resources:
+        id:
+          type: string
+          description: Unique identifier for the class.
+        classTemplateInfo:
+          type: object
+          description: Template information for the class.
+        imageModulesData:
           type: array
           items:
-            $ref: '#/components/schemas/GenericClass'
-        pagination:
+            type: object
+        textModulesData:
+          type: array
+          items:
+            type: object
+        linksModuleData:
           type: object
-          properties:
-            resultsPerPage:
-              type: integer
-            kind:
-              type: string
+        multipleDevicesAndHoldersAllowedStatus:
+          type: string
     GenericObject:
       type: object
       properties:
@@ -189,27 +196,20 @@ components:
                   type: string
                 value:
                   type: string
-    GenericClass:
+    GenericClassListResponse:
       type: object
       properties:
-        id:
-          type: string
-          description: Unique identifier for the class.
-        classTemplateInfo:
-          type: object
-          description: Template information for the class.
-        imageModulesData:
+        resources:
           type: array
           items:
-            type: object
-        textModulesData:
-          type: array
-          items:
-            type: object
-        linksModuleData:
+            $ref: '#/components/schemas/GenericClass'
+        pagination:
           type: object
-        multipleDevicesAndHoldersAllowedStatus:
-          type: string
+          properties:
+            resultsPerPage:
+              type: integer
+            kind:
+              type: string
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest
