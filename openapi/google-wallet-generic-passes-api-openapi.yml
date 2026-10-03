@@ -142,27 +142,6 @@ paths:
                 $ref: '#/components/schemas/GenericObject'
 components:
   schemas:
-    GenericClass:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique identifier for the class.
-        classTemplateInfo:
-          type: object
-          description: Template information for the class.
-        imageModulesData:
-          type: array
-          items:
-            type: object
-        textModulesData:
-          type: array
-          items:
-            type: object
-        linksModuleData:
-          type: object
-        multipleDevicesAndHoldersAllowedStatus:
-          type: string
     GenericObject:
       type: object
       properties:
@@ -210,6 +189,27 @@ components:
               type: integer
             kind:
               type: string
+    GenericClass:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the class.
+        classTemplateInfo:
+          type: object
+          description: Template information for the class.
+        imageModulesData:
+          type: array
+          items:
+            type: object
+        textModulesData:
+          type: array
+          items:
+            type: object
+        linksModuleData:
+          type: object
+        multipleDevicesAndHoldersAllowedStatus:
+          type: string
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest
