@@ -175,20 +175,6 @@ components:
                   type: string
                 value:
                   type: string
-    GenericClassListResponse:
-      type: object
-      properties:
-        resources:
-          type: array
-          items:
-            $ref: '#/components/schemas/GenericClass'
-        pagination:
-          type: object
-          properties:
-            resultsPerPage:
-              type: integer
-            kind:
-              type: string
     GenericClass:
       type: object
       properties:
@@ -210,6 +196,20 @@ components:
           type: object
         multipleDevicesAndHoldersAllowedStatus:
           type: string
+    GenericClassListResponse:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericClass'
+        pagination:
+          type: object
+          properties:
+            resultsPerPage:
+              type: integer
+            kind:
+              type: string
 externalDocs:
   description: Google Wallet API Reference
   url: https://developers.google.com/wallet/reference/rest
