@@ -1,4 +1,4 @@
-# Google Wallet (google-wallet)
+# Google Wallet
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,60 +66,153 @@
 
 The Google Wallet API enables developers to create and manage digital passes including event tickets, boarding passes, loyalty cards, gift cards, offers, transit passes, and generic passes. It provides REST endpoints for creating pass classes (templates) and pass objects (instances), managing issuers, handling media uploads, and generating JWT tokens for save-to-wallet functionality on Android devices and the web.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/apis.yml)
+**Areas:** Digital Wallet · Google Wallet · Loyalty Cards · Mobile Payments · Passes · Ticketing
 
-## Scope
+## Google Wallet on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Wallet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-wallet/](https://apis.io/providers/google-wallet/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Digital Wallet
-- Google Wallet
-- Loyalty Cards
-- Mobile Payments
-- Passes
-- Tickets
+- [Google Wallet Event Tickets API](https://apis.io/apis/google-wallet/google-wallet-event-tickets-api/) — Manage event ticket classes and objects
+- [Google Wallet Generic Passes API](https://apis.io/apis/google-wallet/google-wallet-generic-passes-api/) — Manage generic pass classes and objects
+- [Google Wallet Issuers API](https://apis.io/apis/google-wallet/google-wallet-issuers-api/) — Manage wallet issuers
+- [Google Wallet JWT API](https://apis.io/apis/google-wallet/google-wallet-jwt-api/) — Create save-to-wallet JWTs
+- [Google Wallet Loyalty Cards API](https://apis.io/apis/google-wallet/google-wallet-loyalty-cards-api/) — Manage loyalty card classes and objects
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Wallet API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for creating and managing digital passes including event tickets, loyalty cards, gift cards, offers, transit passes, and generic passes in Google Wallet.
+- [Google Wallet Agentic Access](https://apis.io/agentic-access/google-wallet/google-wallet-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/wallet](https://developers.google.com/wallet)
-- **Base URL:** `https://walletobjects.googleapis.com/walletobjects/v1`
+#### JSON Schema (1)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://developers.google.com/wallet/reference/rest)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
-- [Getting Started](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-schema/google-wallet.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Google Wallet API Schema](https://apis.io/schemas/google-wallet/google-wallet/)
 
-## Common Properties
+#### JSON-LD (1)
 
-- [GitHub Organization](https://github.com/google-wallet)
-- [Portal](https://developers.google.com/wallet)
-- [Getting Started](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
+Linked-data contexts for the provider's vocabulary.
+
+- [Google Wallet Context](https://apis.io/jsonld/google-wallet/google-wallet/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Google Wallet Event Tickets API](https://apis.io/collections/google-wallet/open-google-wallet-event-tickets-api/)
+- [Google Wallet Event Tickets Generic Passes API](https://apis.io/collections/google-wallet/open-google-wallet-generic-passes-api/)
+- [Google Wallet Event Tickets Issuers API](https://apis.io/collections/google-wallet/open-google-wallet-issuers-api/)
+- [Google Wallet Event Tickets JWT API](https://apis.io/collections/google-wallet/open-google-wallet-jwt-api/)
+- [Google Wallet Event Tickets Loyalty Cards API](https://apis.io/collections/google-wallet/open-google-wallet-loyalty-cards-api/)
+- [Google Wallet API](https://apis.io/collections/google-wallet/open-openapi/)
+- [Google Wallet Event Tickets API](https://apis.io/collections/google-wallet/postman-google-wallet-event-tickets-api/)
+- [Google Wallet Event Tickets Generic Passes API](https://apis.io/collections/google-wallet/postman-google-wallet-generic-passes-api/)
+- [Google Wallet Event Tickets Issuers API](https://apis.io/collections/google-wallet/postman-google-wallet-issuers-api/)
+- [Google Wallet Event Tickets JWT API](https://apis.io/collections/google-wallet/postman-google-wallet-jwt-api/)
+- [Google Wallet Event Tickets Loyalty Cards API](https://apis.io/collections/google-wallet/postman-google-wallet-loyalty-cards-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Wallet — jsonschema rules](https://apis.io/rules/google-wallet/google-wallet-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Wallet Domain Security](https://apis.io/security/google-wallet/google-wallet-domain-security/)
+- [Google Wallet Vulnerability Disclosure](https://apis.io/security/google-wallet/google-wallet-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Wallet Plans Pricing](https://apis.io/plans/google-wallet/google-wallet-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Wallet Rate Limits](https://apis.io/rate-limits/google-wallet/google-wallet-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Wallet Finops](https://apis.io/finops/google-wallet/google-wallet-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://developers.google.com/wallet)
-- [Authentication](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
-- [Terms of Service](https://developers.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
+- [Getting started](https://developers.google.com/wallet/generic/getting-started/onboarding-guide)
 - [Support](https://developers.google.com/wallet/support)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/json-ld/google-wallet.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Terms of service](https://developers.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/google-wallet)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 41.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 53.8 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 44.0 |
+| Access clarity | 28.9 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 27.7** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-wallet/](https://apis.io/providers/google-wallet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Wallet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-wallet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
